@@ -1,0 +1,251 @@
+.ats-score-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ─── Main Score Card ───────────────────────────────────────────────────────── */
+.score-main-card {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.score-left {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-circle-wrapper {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-label-below {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.score-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.score-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid;
+  width: fit-content;
+  letter-spacing: 0.3px;
+}
+
+.score-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ─── Meta Stats ────────────────────────────────────────────────────────────── */
+.score-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+}
+
+.meta-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  font-weight: 500;
+}
+
+.meta-value {
+  font-size: 22px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.meta-value.success { color: var(--success); }
+.meta-value.danger { color: var(--danger); }
+
+.meta-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+}
+
+/* ─── Overall Assessment ────────────────────────────────────────────────────── */
+.overall-assessment {
+  padding: 12px 16px;
+  background: rgba(99, 102, 241, 0.06);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.assessment-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ─── Section Scores ────────────────────────────────────────────────────────── */
+.section-scores {
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.section-scores-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.section-scores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.section-score-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-score-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.section-score-value {
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.section-progress-bar {
+  height: 6px;
+  background: var(--bg-input);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.section-progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-feedback {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ─── Strengths ─────────────────────────────────────────────────────────────── */
+.strengths-card {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.strengths-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--success);
+  margin-bottom: 14px;
+}
+
+.strengths-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.strength-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.strength-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .score-main-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .score-badge {
+    margin: 0 auto;
+  }
+
+  .overall-assessment {
+    text-align: left;
+  }
+
+  .score-meta {
+    gap: 8px;
+  }
+
+  .meta-value {
+    font-size: 18px;
+  }
+}

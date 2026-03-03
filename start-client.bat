@@ -1,0 +1,2 @@
+cd client
+node node_modules/vite/bin/vite.js

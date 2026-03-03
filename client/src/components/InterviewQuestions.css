@@ -1,0 +1,89 @@
+.interview-questions {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.generate-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.generate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.questions-content {
+  display: grid;
+  gap: 20px;
+}
+
+.question-category {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.question-category h4 {
+  margin: 0 0 12px 0;
+  color: #667eea;
+  font-size: 1rem;
+}
+
+.question-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.question-item:last-child {
+  margin-bottom: 0;
+}
+
+.question-text {
+  font-weight: 500;
+  color: #333;
+}
+
+.question-focus {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.error-message {
+  background: #fee;
+  color: #c00;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
