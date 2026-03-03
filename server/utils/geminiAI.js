@@ -56,15 +56,21 @@ const analyzeResumeWithAI = async (resumeText, jobDescription, isDemoMode = fals
     if (error.response) {
       const status = error.response.status;
       const message = error.response.data?.error?.message || "Unknown API error";
+      // If 403 (invalid key), fall back to demo mode instead of throwing error
+      if (status === 403) {
+        console.log("⚠️ Invalid API key. Falling back to demo mode.");
+        return getDemoAnalysis(resumeText, jobDescription);
+      }
       if (status === 400) throw new Error(`Invalid API request: ${message}`);
-      if (status === 403) throw new Error("Invalid or unauthorized Gemini API key.");
       if (status === 429) throw new Error("API rate limit exceeded. Please try again later.");
       throw new Error(`Gemini API error (${status}): ${message}`);
     }
     if (error.code === "ECONNABORTED") {
       throw new Error("Request timed out. Please try again.");
     }
-    throw new Error(`AI analysis failed: ${error.message}`);
+    // For other errors, fall back to demo mode
+    console.log(`⚠️ API error: ${error.message}. Falling back to demo mode.`);
+    return getDemoAnalysis(resumeText, jobDescription);
   }
 };
 

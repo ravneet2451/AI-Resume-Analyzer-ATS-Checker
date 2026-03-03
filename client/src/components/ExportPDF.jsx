@@ -1,12 +1,21 @@
+import { useState } from "react";
 import "./ExportPDF.css";
 
 const ExportPDF = ({ analysisData }) => {
+  const [exporting, setExporting] = useState(false);
+
   const handleExport = () => {
-    const printContent = document.getElementById("analysis-content");
-    if (!printContent) return;
+    setExporting(true);
+    
+    if (!analysisData) {
+      setExporting(false);
+      alert("No content to export");
+      return;
+    }
 
     const printWindow = window.open("", "_blank");
     if (!printWindow) {
+      setExporting(false);
       alert("Please allow popups to export PDF");
       return;
     }

@@ -308,6 +308,42 @@ const Home = () => {
                 title: "Strengths Highlight",
                 desc: "Discover what your resume does well and leverage those strengths in interviews.",
               },
+              {
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 010 7.75"/>
+                  </svg>
+                ),
+                color: "#ec4899",
+                title: "Interview Questions",
+                desc: "Get personalized interview questions based on your resume and the job description.",
+              },
+              {
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="12" y1="1" x2="12" y2="23"/>
+                    <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                  </svg>
+                ),
+                color: "#14b8a6",
+                title: "Salary Insights",
+                desc: "Get salary insights and compensation details based on your skills and experience.",
+              },
+              {
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                ),
+                color: "#f97316",
+                title: "Export PDF",
+                desc: "Export your analysis results and improved resume to PDF for easy sharing.",
+              },
             ].map((feature, idx) => (
               <div key={idx} className="feature-card">
                 <div

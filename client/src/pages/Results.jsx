@@ -194,7 +194,7 @@ const Results = () => {
               jobDescription={results.jobDescription} 
             />
           )}
-          {activeTab === "export" && <ExportPDF data={results} />}
+          {activeTab === "export" && <ExportPDF analysisData={results} />}
         </div>
       </div>
 

@@ -10,11 +10,11 @@ router.get("/health", healthCheck);
 // Resume analysis route (protected - requires authentication)
 router.post("/analyze", auth, upload.single("resume"), analyzeResume);
 
-// Generate interview questions (protected)
-router.post("/interview-questions", auth, generateInterviewCtrl);
+// Generate interview questions (public - no auth required)
+router.post("/interview-questions", generateInterviewCtrl);
 
-// Get salary insights (protected)
-router.post("/salary-insights", auth, getSalaryInsightsCtrl);
+// Get salary insights (public - no auth required)
+router.post("/salary-insights", getSalaryInsightsCtrl);
 
 // Handle multer errors
 router.use((err, req, res, next) => {

@@ -11,11 +11,10 @@ const SalaryInsights = ({ resumeText, jobDescription }) => {
     setLoading(true);
     setError(null);
     try {
-      const token = localStorage.getItem("token");
+      // Public endpoint - no auth required
       const response = await axios.post(
         "http://localhost:5000/api/salary-insights",
-        { resumeText, jobDescription },
-        { headers: { Authorization: `Bearer ${token}` } }
+        { resumeText, jobDescription }
       );
       if (response.data.success) {
         setInsights(response.data.data);
